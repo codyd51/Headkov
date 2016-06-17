@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F2323B0F1D10E23E001061CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B0E1D10E23E001061CB /* main.m */; };
+		F2323B171D139FF1001061CB /* MKVStringGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B161D139FF1001061CB /* MKVStringGenerator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		F2323B0B1D10E23E001061CB /* Markov */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Markov; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2323B0E1D10E23E001061CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F2323B151D139FF1001061CB /* MKVStringGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKVStringGenerator.h; sourceTree = "<group>"; };
+		F2323B161D139FF1001061CB /* MKVStringGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKVStringGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				F2323B0E1D10E23E001061CB /* main.m */,
+				F2323B151D139FF1001061CB /* MKVStringGenerator.h */,
+				F2323B161D139FF1001061CB /* MKVStringGenerator.m */,
 			);
 			path = Markov;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2323B0F1D10E23E001061CB /* main.m in Sources */,
+				F2323B171D139FF1001061CB /* MKVStringGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
