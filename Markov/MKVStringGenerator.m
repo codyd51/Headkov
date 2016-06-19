@@ -35,8 +35,10 @@
     }
     return self;
 }
--(NSString*)generateString:(int)wordCount {
-    NSUInteger previousIdx = 0;
+-(NSString*)generateStringOfLength:(int)wordCount {
+    //start with a random index
+    NSUInteger previousIdx = arc4random_uniform(self.tokens.count);
+    
     NSMutableString* result = [NSMutableString new];
     for (NSUInteger i = 0; i < wordCount; i++) {
         //start with token at the previous index

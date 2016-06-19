@@ -13,5 +13,5 @@
 }
 @property (nonatomic, retain) NSArray* tokens;
 -(instancetype)initWithBaseString:(NSString*)string;
--(NSString*)generateString:(int)wordCount;
+-(NSString*)generateStringOfLength:(int)wordCount;
 @end

@@ -15,19 +15,23 @@
         _parser.delegate = self;
         _parser.feedParseType = ParseTypeFull;
         _parser.connectionType = ConnectionTypeSynchronously;
+        
+        _headlines = [NSMutableArray new];
     }
     return self;
 }
 -(void)parseStart {
     [_parser parse];
 }
--(void)refresh {
+-(void)refreshWithCompletion:(void(^__strong)(NSArray *))compBlock {
+    _compBlock = compBlock;
     [self parseStart];
 }
-- (void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(MWFeedInfo *)info {
-    NSLog(@"%@: %@, %@", info.link, info.title, info.summary);
+-(void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(MWFeedInfo *)info {
+    //NSLog(@"%@: %@, %@", info.link, info.title, info.summary);
 }
-- (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item {
+-(void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item {
+    /*
     static int i = 0;
     NSLog(@"---%i--", i);
     
@@ -36,5 +40,10 @@
     NSLog(@"%@", item.content);
     NSLog(@"Identifier: %@", item.identifier);
     i++;
+     */
+    [_headlines addObject:item.title];
+}
+-(void)feedParserDidFinish:(MWFeedParser *)parser {
+    _compBlock(_headlines);
 }
 @end

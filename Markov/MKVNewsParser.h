@@ -11,7 +11,9 @@
 
 @interface MKVNewsParser : NSObject <MWFeedParserDelegate> {
     MWFeedParser* _parser;
+    void (^_compBlock)(NSArray* titles);
+    NSMutableArray* _headlines;
 }
 -(instancetype)initWithFeedURL:(NSURL*)url;
--(void)refresh;
+-(void)refreshWithCompletion:(void(^__strong)(NSArray* titles))compBlock;
 @end

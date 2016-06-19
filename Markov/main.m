@@ -24,7 +24,24 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%@", res);
          */
         MKVNewsParser* parser = [[MKVNewsParser alloc] initWithFeedURL:[NSURL URLWithString:@"http://rss.cnn.com/rss/cnn_topstories.rss"]];
-        [parser refresh];
+        [parser refreshWithCompletion:^void(NSArray* headlines){
+            //convert all headlines into one string
+            NSString* titles = [[headlines valueForKey:@"description"] componentsJoinedByString:@" "];
+            
+            //create string generator with this text
+            MKVStringGenerator* stringGen = [[MKVStringGenerator alloc] initWithBaseString:titles];
+            
+            //create some random headlines
+            for (int i = 0; i < 20; i++) {
+                //create headline of random length
+                int minLength = 6;
+                int maxLength = 30;
+                int length = minLength + arc4random() % (maxLength - minLength);
+                NSString* headline = [stringGen generateStringOfLength:length];
+                
+                NSLog(@"%@", headline);
+            }
+        }];
     }
     return 0;
 }
