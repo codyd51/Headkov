@@ -73,7 +73,7 @@
         //set the next index to this one
         if ([self.tokens indexOfObject:next] != NSNotFound) {
             previousIdx = [self.tokens indexOfObject:next];
-        } else previousIdx = 0;
+        } else break;
     }
     
     return [NSString stringWithString:result];
