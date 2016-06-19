@@ -35,9 +35,29 @@
     }
     return self;
 }
+-(NSUInteger)randomValidBaseIndex {
+    //TODO improve this
+    
+    //try a random index and see if it starts with a capital
+    //if so, it's a valid base
+    //if not, recurse and try another
+    NSUInteger guessIndex = arc4random_uniform((u_int32_t)self.tokens.count);
+    NSString* guess = self.tokens[guessIndex];
+    if (!guess || guess.length == 0) {
+        return [self randomValidBaseIndex];
+    }
+    
+    BOOL isUppercase = [[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:[guess characterAtIndex:0]];
+    if (isUppercase) {
+        return guessIndex;
+    }
+    
+    //didn't find a string starting with a capital, recurse and try again
+    return [self randomValidBaseIndex];
+}
 -(NSString*)generateStringOfLength:(int)wordCount {
     //start with a random index
-    NSUInteger previousIdx = arc4random_uniform(self.tokens.count);
+    NSUInteger previousIdx = [self randomValidBaseIndex];
     
     NSMutableString* result = [NSMutableString new];
     for (NSUInteger i = 0; i < wordCount; i++) {
@@ -48,8 +68,7 @@
         //now, find the next token to use
         //to do so, randomly chose one of the possible tokens from this state
         NSMutableArray* possibilities = _states[str];
-        NSString* next = ([possibilities count] == 0) ? @"" : [possibilities objectAtIndex:arc4random_uniform([possibilities count])];
-        //NSString* next = possibilities[arc4random_uniform(possibilities.count)];
+        NSString* next = ([possibilities count] == 0) ? @"" : [possibilities objectAtIndex:arc4random_uniform((u_int32_t)[possibilities count])];
         
         //set the next index to this one
         if ([self.tokens indexOfObject:next] != NSNotFound) {

@@ -12,17 +12,6 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        
-        //get input from stdin
-        /*
-        input = [input stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        input = [input stringByTrimmingCharactersInSet:[NSCharacterSet illegalCharacterSet]];
-        
-        //generate text from input
-        MKVStringGenerator* gen = [[MKVStringGenerator alloc] initWithBaseString:input];
-        NSString* res = [gengenerateString:500];
-        NSLog(@"%@", res);
-         */
         MKVNewsParser* parser = [[MKVNewsParser alloc] initWithFeedURL:[NSURL URLWithString:@"http://rss.cnn.com/rss/cnn_topstories.rss"]];
         [parser refreshWithCompletion:^void(NSArray* headlines){
             //convert all headlines into one string
@@ -34,8 +23,8 @@ int main(int argc, const char * argv[]) {
             //create some random headlines
             for (int i = 0; i < 20; i++) {
                 //create headline of random length
-                int minLength = 6;
-                int maxLength = 30;
+                int minLength = 5;
+                int maxLength = 20;
                 int length = minLength + arc4random() % (maxLength - minLength);
                 NSString* headline = [stringGen generateStringOfLength:length];
                 

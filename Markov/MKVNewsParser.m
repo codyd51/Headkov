@@ -27,20 +27,7 @@
     _compBlock = compBlock;
     [self parseStart];
 }
--(void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(MWFeedInfo *)info {
-    //NSLog(@"%@: %@, %@", info.link, info.title, info.summary);
-}
 -(void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item {
-    /*
-    static int i = 0;
-    NSLog(@"---%i--", i);
-    
-    NSLog(@"%@ - %@: %@ by %@", item.date, item.link, item.title, item.author);
-    NSLog(@"%@", item.summary);
-    NSLog(@"%@", item.content);
-    NSLog(@"Identifier: %@", item.identifier);
-    i++;
-     */
     [_headlines addObject:item.title];
 }
 -(void)feedParserDidFinish:(MWFeedParser *)parser {
