@@ -8,19 +8,23 @@
 
 #import <Foundation/Foundation.h>
 #import "MKVStringGenerator.h"
+#import "MKVNewsParser.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        
         //get input from stdin
-        NSFileHandle* stdinHandle = [NSFileHandle fileHandleWithStandardInput];
-        NSString *input = [[NSString alloc] initWithData:[NSData dataWithData:[stdinHandle availableData]] encoding:NSUTF8StringEncoding];
+        /*
         input = [input stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         input = [input stringByTrimmingCharactersInSet:[NSCharacterSet illegalCharacterSet]];
         
         //generate text from input
         MKVStringGenerator* gen = [[MKVStringGenerator alloc] initWithBaseString:input];
-        NSString* res = [gen generateString:500];
+        NSString* res = [gengenerateString:500];
         NSLog(@"%@", res);
+         */
+        MKVNewsParser* parser = [[MKVNewsParser alloc] initWithFeedURL:[NSURL URLWithString:@"http://rss.cnn.com/rss/cnn_topstories.rss"]];
+        [parser refresh];
     }
     return 0;
 }

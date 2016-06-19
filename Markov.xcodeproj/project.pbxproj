@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		F2323B0F1D10E23E001061CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B0E1D10E23E001061CB /* main.m */; };
 		F2323B171D139FF1001061CB /* MKVStringGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B161D139FF1001061CB /* MKVStringGenerator.m */; };
+		F2323B311D13A575001061CB /* MWFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B201D13A575001061CB /* MWFeedParser.m */; };
+		F2323B321D13A575001061CB /* MWFeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B221D13A575001061CB /* MWFeedInfo.m */; };
+		F2323B331D13A575001061CB /* MWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B241D13A575001061CB /* MWFeedItem.m */; };
+		F2323B341D13A575001061CB /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B271D13A575001061CB /* NSString+HTML.m */; };
+		F2323B351D13A575001061CB /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B291D13A575001061CB /* NSDate+InternetDateTime.m */; };
+		F2323B361D13A575001061CB /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B2B1D13A575001061CB /* GTMNSString+HTML.m */; };
+		F2323B371D13A575001061CB /* NSString+XMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B2E1D13A575001061CB /* NSString+XMLEntities.m */; };
+		F2323B3A1D13A679001061CB /* MKVNewsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B391D13A679001061CB /* MKVNewsParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +36,23 @@
 		F2323B0E1D10E23E001061CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F2323B151D139FF1001061CB /* MKVStringGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKVStringGenerator.h; sourceTree = "<group>"; };
 		F2323B161D139FF1001061CB /* MKVStringGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKVStringGenerator.m; sourceTree = "<group>"; };
+		F2323B1E1D13A575001061CB /* MWFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser.h; sourceTree = "<group>"; };
+		F2323B1F1D13A575001061CB /* MWFeedParser_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser_Private.h; sourceTree = "<group>"; };
+		F2323B201D13A575001061CB /* MWFeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedParser.m; sourceTree = "<group>"; };
+		F2323B211D13A575001061CB /* MWFeedInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedInfo.h; sourceTree = "<group>"; };
+		F2323B221D13A575001061CB /* MWFeedInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedInfo.m; sourceTree = "<group>"; };
+		F2323B231D13A575001061CB /* MWFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedItem.h; sourceTree = "<group>"; };
+		F2323B241D13A575001061CB /* MWFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedItem.m; sourceTree = "<group>"; };
+		F2323B261D13A575001061CB /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		F2323B271D13A575001061CB /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		F2323B281D13A575001061CB /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
+		F2323B291D13A575001061CB /* NSDate+InternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+InternetDateTime.m"; sourceTree = "<group>"; };
+		F2323B2A1D13A575001061CB /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		F2323B2B1D13A575001061CB /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		F2323B2D1D13A575001061CB /* NSString+XMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMLEntities.h"; sourceTree = "<group>"; };
+		F2323B2E1D13A575001061CB /* NSString+XMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMLEntities.m"; sourceTree = "<group>"; };
+		F2323B381D13A679001061CB /* MKVNewsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKVNewsParser.h; sourceTree = "<group>"; };
+		F2323B391D13A679001061CB /* MKVNewsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKVNewsParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +85,62 @@
 		F2323B0D1D10E23E001061CB /* Markov */ = {
 			isa = PBXGroup;
 			children = (
+				F2323B251D13A575001061CB /* MWFeedParser */,
+				F2323B301D13A575001061CB /* Categories */,
 				F2323B0E1D10E23E001061CB /* main.m */,
+				F2323B381D13A679001061CB /* MKVNewsParser.h */,
+				F2323B391D13A679001061CB /* MKVNewsParser.m */,
 				F2323B151D139FF1001061CB /* MKVStringGenerator.h */,
 				F2323B161D139FF1001061CB /* MKVStringGenerator.m */,
 			);
 			path = Markov;
+			sourceTree = "<group>";
+		};
+		F2323B251D13A575001061CB /* MWFeedParser */ = {
+			isa = PBXGroup;
+			children = (
+				F2323B1E1D13A575001061CB /* MWFeedParser.h */,
+				F2323B1F1D13A575001061CB /* MWFeedParser_Private.h */,
+				F2323B201D13A575001061CB /* MWFeedParser.m */,
+				F2323B211D13A575001061CB /* MWFeedInfo.h */,
+				F2323B221D13A575001061CB /* MWFeedInfo.m */,
+				F2323B231D13A575001061CB /* MWFeedItem.h */,
+				F2323B241D13A575001061CB /* MWFeedItem.m */,
+			);
+			name = MWFeedParser;
+			path = "../../../../Downloads/MWFeedParser-master/Classes";
+			sourceTree = "<group>";
+		};
+		F2323B2C1D13A575001061CB /* Google Toolbox for Mac */ = {
+			isa = PBXGroup;
+			children = (
+				F2323B2A1D13A575001061CB /* GTMNSString+HTML.h */,
+				F2323B2B1D13A575001061CB /* GTMNSString+HTML.m */,
+			);
+			name = "Google Toolbox for Mac";
+			sourceTree = "<group>";
+		};
+		F2323B2F1D13A575001061CB /* Depreciated */ = {
+			isa = PBXGroup;
+			children = (
+				F2323B2D1D13A575001061CB /* NSString+XMLEntities.h */,
+				F2323B2E1D13A575001061CB /* NSString+XMLEntities.m */,
+			);
+			name = Depreciated;
+			sourceTree = "<group>";
+		};
+		F2323B301D13A575001061CB /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F2323B261D13A575001061CB /* NSString+HTML.h */,
+				F2323B271D13A575001061CB /* NSString+HTML.m */,
+				F2323B281D13A575001061CB /* NSDate+InternetDateTime.h */,
+				F2323B291D13A575001061CB /* NSDate+InternetDateTime.m */,
+				F2323B2C1D13A575001061CB /* Google Toolbox for Mac */,
+				F2323B2F1D13A575001061CB /* Depreciated */,
+			);
+			name = Categories;
+			path = "../../../../Downloads/MWFeedParser-master/Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,8 +199,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2323B3A1D13A679001061CB /* MKVNewsParser.m in Sources */,
 				F2323B0F1D10E23E001061CB /* main.m in Sources */,
 				F2323B171D139FF1001061CB /* MKVStringGenerator.m in Sources */,
+				F2323B331D13A575001061CB /* MWFeedItem.m in Sources */,
+				F2323B371D13A575001061CB /* NSString+XMLEntities.m in Sources */,
+				F2323B351D13A575001061CB /* NSDate+InternetDateTime.m in Sources */,
+				F2323B311D13A575001061CB /* MWFeedParser.m in Sources */,
+				F2323B361D13A575001061CB /* GTMNSString+HTML.m in Sources */,
+				F2323B341D13A575001061CB /* NSString+HTML.m in Sources */,
+				F2323B321D13A575001061CB /* MWFeedInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
